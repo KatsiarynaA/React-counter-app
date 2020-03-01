@@ -3,12 +3,12 @@ import './App.css';
 
 function AddCounterForm(props) {
 
-    const [name, setName] = useState(('---'));
-    const [count, setCount] = useState((456));
+    const [name, setName] = useState('Counter ');
+    const [count, setCount] = useState(0);
 
     const onSubmit = () => {
         props.onSubmit(name, Number(count));
-        setName('');
+        setName('Counter ');
         setCount(0);
     };
 
@@ -28,7 +28,9 @@ function AddCounterForm(props) {
             </div>
 
             <div className="col">
-                <button onClick={() => onSubmit(name, count)} className='btn btn-outline-secondary'>Create</button>
+                <button onClick={() => onSubmit(name, count)}
+                        className='btn btn-outline-secondary'>Create
+                </button>
             </div>
 
         </div>
